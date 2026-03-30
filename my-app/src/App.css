@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px; /* gutter */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 80px; /* margins */
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 8px;
+  gap: 0px 20px; /* gutter */
+  margin: 70px;
+  padding: 0 70px; /* margins top-bottom, left-right / rows & columns */
+
 }
 
 .App-logo {
@@ -41,5 +41,31 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 8px; /*   grid-template-rows: repeat(1000, 8px); might slow down browser so making it  grid-auto-rows: 8p;*/
+    gap: 0px 20px; /* gutter */
+    max-width: 768px;
+    margin: 0px 70px;
+    padding: 0 80px; /* margins */
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 8px;
+    gap: 0px 20px; /* gutter */
+    max-width: 1200px;
+    margin: 70px;
+    padding: 0 70px; /* margins top-bottom, left-right / rows & columns */
   }
 }
