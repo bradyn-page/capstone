@@ -3,10 +3,12 @@ import './App.css';
 export default function Main () {
  
  return (<main >
-  {/*<section className="Specials">
-    <h1>Specials</h1>
-    <button className="Menu-button">Online Menu</button>
-*/}
+  <section className="Specials">
+    <div className="specials-header">
+      <h1 className="specials-header-title">SPECIALS</h1>
+      <button className="Menu-button">Online Menu</button>
+    </div>
+             {/* Cards Section*/}
               {/* Card 1*/}
         <div className="cards">
           <div className="card">
@@ -16,86 +18,129 @@ export default function Main () {
                 <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
             </div>
             <div className='card__info'>
-              <img src="/images/bike-logo.jpg" alt="bike-logo" />
-              <div>310 likes</div>
               <div>
-              <a href="order-online.html" className='card__link'>Order a Delivery</a>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div> 
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
               </div>
             </div>
          </div>
-       
-
            {/* Card 2*/}
      
           <div className="card">
-            <img src="images/icons/bruchetta.svg" alt="special1"  />
+            <img src="images/icons/bruchetta.svg" alt="special2" className="card__image" />
             <div className='card__content'>
                 <h2>Greek Salad</h2>
                 <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
             </div>
             <div className='card__info'>
-            
-              <img src="/images/bike-logo.jpg"  alt="bike-logo" />
-              <div>310 likes</div>
               <div>
-              <a href="order-online.html" className='card__link'>Order a Delivery</a>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div> 
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
               </div>
             </div>
          </div>
     
         {/* Card 3*/}
-      
           <div className="card">
-            <img src="images/icons/lemon dessert.jpg" alt="special1" className="card__image"  />
+            <img src="images/icons/lemon dessert.jpg" alt="special3" className="card__image"  />
             <div className='card__content'>
                 <h2>Greek Salad</h2>
                 <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
             </div>
             <div className='card__info'>
-              <div> <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' /></div>
               <div>
-              <a href="order-online.html" className='card__link'>Order a Delivery</a>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div>
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
               </div>
             </div>
          </div>
          </div>
-
-  {/*</section>*/}
-
-              {/*Testimonials */}
-    <section className="Testimonials">
-      <h1>Testimonials</h1>
-      <div className="testimonial">
-        <img src="" alt="special1" />
-          <h2></h2>
-          <p></p>
-          <a href="order-online.html">Order a Delivery</a>
-           <img src="images/bike-logo.jpg" alt="bike-logo" />
-      </div>
-      <div className="testimonial">
-          <img src="" alt="special1" />
-          <h2></h2>
-          <p></p>
-          <a href="order-online.html">Order a Delivery</a>
-           <img src="images/bike-logo.jpg" alt="bike-logo" />
-        </div>
-        <div className="testimonial">
-          <img src="" alt="special1" />
-          <h2></h2>
-          <p></p>
-          <a href="order-online.html">Order a Delivery</a>
-           <img src="images/bike-logo.jpg" alt="bike-logo" />
-        </div>
       </section>
 
-      <section className="About">
-      <h2>Little Lemon</h2>
-      <h3> Chicago</h3>
-      <p>A vibrant Mediterranean kitchen where fresh ingredients, bold spices, and timeless recipes come together. From savory grilled meats and bright, herb-filled salads to warm, comforting classNameNameics, every dish is crafted to celebrate flavor, balance, and tradition. Simple, wholesome, and made to be shared.</p>
-      <div classNameName="About-img">
-        <img src="/images/maria.jpeg" alt="wife" />
-        <img src="images/dan.jpg" alt="husbands" />
-      </div>
+
+
+              {/*Testimonials */}
+<section className="Specials">
+    <div className="testimonials-header">
+      <h1 className="testimonials-header-title">TESTIMONIALS</h1>
+    </div>
+             {/* Cards Section*/}
+              {/* Card 1*/}
+        <div className="testimonial-cards">
+          <div className="card">
+            <img src="./images/icons/greek salad.jpg" alt="special1" className="card__image" />
+            <div className='card__content'>
+                <h2>Greek Salad</h2>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+            </div>
+            <div className='card__info'>
+              <div>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div> 
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
+              </div>
+            </div>
+         </div>
+           {/* Card 2*/}
+     
+          <div className="card">
+            <img src="images/icons/bruchetta.svg" alt="special2" className="card__image" />
+            <div className='card__content'>
+                <h2>Greek Salad</h2>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+            </div>
+            <div className='card__info'>
+              <div>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div> 
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
+              </div>
+            </div>
+         </div>
+    
+        {/* Card 3*/}
+          <div className="card">
+            <img src="images/icons/lemon dessert.jpg" alt="special3" className="card__image"  />
+            <div className='card__content'>
+                <h2>Greek Salad</h2>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+            </div>
+            <div className='card__info'>
+              <div>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div>
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
+              </div>
+            </div>
+         </div>
+
+
+        {/* Card 4*/}
+        <div className="card">
+            <img src="images/icons/lemon dessert.jpg" alt="special3" className="card__image"  />
+            <div className='card__content'>
+                <h2>Greek Salad</h2>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+            </div>
+            <div className='card__info'>
+              <div>
+                  <a href="order-online.html" className='card__link'>Order a Delivery</a>
+              </div>
+              <div>
+                  <img src="/images/bike-logo.jpg" alt="bike-logo" className='bike-icon' />
+              </div>
+            </div>
+         </div>
+         </div>
       </section>
     </main>)
 

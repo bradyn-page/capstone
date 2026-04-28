@@ -10,7 +10,7 @@
   /* Font Families */
   --font-heading: "Markazi Text", serif; /*head, subhead*/
   --font-leadText: '', sans-serif;
-  --font-body: 'Karla', sans-serif; /*body*/
+  --font-body: 'Karla', sans-serif; /*paragraph*/
 
 
   /* Font Sizes */
@@ -22,7 +22,7 @@
 
   /* Font Weights */
   --weight-normal: 400;
-  --weight-header: 500; /*medium*, use for header, lead tex, highlight text*/
+  --weight-medium: 500; /*medium*, use for header, lead tex, highlight text*/
   --weight-bold: 700;
   --weight-extraBold: 800;
 
@@ -30,7 +30,7 @@
   --paragraph-line-height: 1.5;
 
   /* Design System Colors */
-  --primary-green: #495E57;
+  --primary-dark: #495E57;
   --primary-yellow: #F4CE14;
   --secondary-orange: #EE9972;
   --secondary-beige: #FBDABB;
@@ -90,30 +90,101 @@
   display: block;    removes extra space below inline images 
   border-radius: 5%;
 }*/
-.Menu-button{
-  width: 20%;      /* fixed size for logo/icon */
-  height: auto;     /* preserve ratio */
+
+.Specials {
+  font-family: var(--font-body);
 }
 
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px;
+  padding: 0 70px; 
+}
+.specials-header-title{
+  font-weight: var(--weight-extraBold);
+  font-size: var(--size-sectionTitle);
+}
+
+.Menu-button{
+  width: 20%;      /* fixed size for logo/icon */
+  height: 4em;     /* preserve ratio */
+  background-color: var(--primary-yellow);
+  color: var(--primary-dark);
+  font-weight: var(--weight-bold);
+  border-radius: 16px;
+  border: none;
+}
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;           /* space between cards */
   margin: 0 auto;
   max-width: 1000px;   /* limits row width on desktop */
   border: solid;
   font-family: var(--font-body);
+  font-size: var(--size-base);
+   align-items: stretch;
+
 }
 
 .card {
   box-shadow: 0 0 3px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .card__image {
   width: 100%;  /* image never exceeds container width */
   height: auto;     /* preserves aspect ratio */
   display: block;   /* removes extra space below inline images */
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
 }
+
+.card__content {
+  line-height: var(--paragraph-line-height);
+  font-size: var(--font-body);
+  font-weight: var(--size-base);
+  padding: 15px;
+  background-color: var(--highlight-white);
+}
+
+.card__content > p:first-of-type {
+  margin-top: 0;
+}
+.card__content > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card__info {
+  padding: 15px;
+  display: flex;
+  background: var(--highlight-white);
+  font-size: var(--size-base);
+  font-weight: var(--weight-medium);
+  border-bottom: 2px solid  var(--highlight-white);
+  align-items: center;
+}
+
+.card__info img{
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+.card__link{
+  color: var(--highlight-dark);
+  text-decoration: none;
+  display: flex;
+}
+
+.card__link:hover{
+  color: var(--primary-yellow);
+}
+
+.bike-icon {
+  max-width: 2em;
+}
+
 nav  {
   display: flex;
   justify-content: center;
@@ -135,29 +206,144 @@ nav a {
   
 }
 header{
-  display: flex;
+  display: flex; /*prev display flex*/
   background-color: #495E57;
   margin: auto;
   padding: 20px;
+  justify-content: space-between;
 }
 
 .header-info {
   text-align: left;
 }
 header img{
-  border-radius: 10%;
-  padding: 20px;
+  width: 200px; /* Set your desired size */
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* Crops the image to fit without stretching */
+  border-radius: 16px;
 }
+
+.reserve-TblBtn {
+  width: 10em;      /* fixed size for logo/icon */
+  height: 4em;     /* preserve ratio */
+  background-color: var(--primary-yellow);
+  color: var(--primary-dark);
+  font-weight: var(--weight-bold);
+  border-radius: var(--size-base);
+  border: none;
+}
+
+.left-header {
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.header-txt {
+  max-width: 20vw;
+}
+
+/*Main page*/
+.About-img {
+  max-width: 50%;
+  border-radius: var(--size-base);
+}
+
+/*Testimonials that didn't work*/
+
+.testimonials{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;           /* space between cards */
+  margin: 0 auto;
+  max-width: 1000px;   /* limits row width on desktop */
+  border: solid;
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+   align-items: stretch;
+   background-color: #495E57;
+   margin: auto;
+   padding: 20px;
+}
+.testimonials-header {
+  text-align: center;
+}
+.testimonial-card {
+  box-shadow: 0 0 3px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.rating__image {
+  width: 50%;  /* image never exceeds container width */
+  height: auto;     /* preserves aspect ratio */
+  display: block;   /* removes extra space below inline images */
+  object-fit: cover;
+}
+.rating-name{
+  align-items: right;
+  padding-left: 16px;
+}
+
+.testimonials-img-name {
+  display: flex;
+}
+
+.testimonial-card p {
+  padding-top: 16px;
+  font-size: 14px;
+}
+
+/*End of Testimonials that didn't work*/
+
+/*Testimonials based off Specials section*/
+
+.testimonial-cards  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;           /* space between cards */
+  margin: 0 auto;
+  max-width: 1000px;   /* limits row width on desktop */
+  border: solid;
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+   align-items: stretch;
+}
+
+.testimonials-header-title{
+  font-weight: var(--weight-extraBold);
+  font-size: var(--size-sectionTitle);
+  text-align: center;
+}
+.testimonials-header {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  margin: 70px;
+  padding: 0 70px; 
+}
+
+/*End of Testimonials based off Specials section*/
+
+
+/*About */
+/*End of About */
+
+/*End of Main */
+/*Footer */
+/*End of Footer*/
+
+
 /* Tablet */
 @media (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 8px; /*   grid-template-rows: repeat(1000, 8px); might slow down browser so making it  grid-auto-rows: 8p;*/
     gap: 0px 20px; /* gutter */
     max-width: 768px;
     margin: 0px 70px;
     padding: 0 80px; /* margins */
+  }
+
+  .cards{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
@@ -171,5 +357,21 @@ header img{
     max-width: 1200px;
     margin: 70px;
     padding: 0 70px; /* margins top-bottom, left-right / rows & columns */
+  }
+
+  .cards{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /*on desktop 4 columns will display*/
+    gap: 20px;           /* space between cards */
+    margin: 0 auto;
+    max-width: 1000px;   /* limits row width on desktop */
+    border: solid;
+    font-family: var(--font-body);
+    font-size: var(--size-base);
+     align-items: stretch;
+  
   }
 }

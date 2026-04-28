@@ -3,7 +3,7 @@ import './App.css';
 export default function Footer () {
   <>
   <img src="/images/Logo.svg" alt="Logo"/>
-  <ul class="doormat-nav">
+  <ul className="doormat-nav">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="menu.html">Menu</a></li>
@@ -11,12 +11,12 @@ export default function Footer () {
     <li><a href="order-online.html">Order Online</a></li>
     <li><a href="git ">Log In</a></li>
   </ul>
-  <ul class="contact-info">
+  <ul className="contact-info">
     <p>Address</p>
     <p>Phone Number</p>
     <p>Email</p>
   </ul>
-  <ul class="socials">
+  <ul className="socials">
     <p>Address</p>
     <p>Phone Number</p>
     <p>Email</p>
